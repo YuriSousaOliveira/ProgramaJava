@@ -1,0 +1,96 @@
+import java.applet.Applet;
+import javax.swing.*;
+import javax.swing.border.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import java.net.URL;
+
+public class Principal extends JFrame {
+	
+	private JPanel contentPane;
+	
+	public static void main(String[] args) {
+	}
+	public Principal() {
+		
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Principal.class.getResource("/Imagens/icon.png")));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 720, 720);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(2, 2, 2, 2));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnproblemas = new JButton("");
+		btnproblemas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Problemas pag2 = new Problemas();  
+	             pag2.setVisible(true);
+	             pag2.setExtendedState(JFrame.MAXIMIZED_BOTH);
+	             dispose();
+			}
+		});
+		btnproblemas.setBounds(236, 202, 150, 25);
+		ImageIcon imagens1 =new ImageIcon (Principal.class.getResource("/Imagens/TelasProblemas.png"));
+		Image botao= imagens1.getImage().getScaledInstance(btnproblemas.getWidth(),btnproblemas.getHeight() , Image.SCALE_SMOOTH);
+		btnproblemas.setIcon(new ImageIcon(botao));
+		contentPane.add(btnproblemas);
+		
+		JButton btnraking = new JButton("");
+		btnraking.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 Ranking pag2 = new Ranking();  
+	             pag2.setVisible(true);
+	             pag2.setExtendedState(JFrame.MAXIMIZED_BOTH);
+	             dispose();
+			}
+	             
+		});
+		btnraking.setBounds(236, 278, 205, 65);
+		ImageIcon imagens2 =new ImageIcon (Principal.class.getResource("/Imagens/Bot2.png"));
+		Image botao2= imagens2.getImage().getScaledInstance(btnraking.getWidth(),btnraking.getHeight() , Image.SCALE_SMOOTH);
+		btnraking.setIcon(new ImageIcon(botao2));
+		contentPane.add(btnraking);
+		
+		JButton btnajuda = new JButton("");
+		btnajuda.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Ajuda pag3 = new Ajuda();
+				pag3.setVisible(true);
+				pag3.setExtendedState(JFrame.MAXIMIZED_BOTH);
+	            dispose(); 
+			}
+		});
+		btnajuda.setBounds(236, 354, 205, 65);
+		ImageIcon imagens3 =new ImageIcon (Principal.class.getResource("/Imagens/Bot4.png"));
+		Image botao3= imagens3.getImage().getScaledInstance(btnajuda.getWidth(),btnajuda.getHeight() , Image.SCALE_SMOOTH);
+		btnajuda.setIcon(new ImageIcon(botao3));
+		contentPane.add(btnajuda);
+		
+		JButton btnsair = new JButton("");
+		btnsair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				dispose();
+			}
+		});
+		btnsair.setBounds(1250, 644, 48, 48);
+		ImageIcon imagens4 =new ImageIcon (Principal.class.getResource("/Imagens/exit.png"));
+		Image botao4= imagens4.getImage().getScaledInstance(btnsair .getWidth(),btnsair .getHeight() , Image.SCALE_SMOOTH);
+		btnsair .setIcon(new ImageIcon(botao4));
+		contentPane.add(btnsair);
+		
+		JLabel lblMapa = new JLabel("");
+		lblMapa.setBounds(0, 0, 720, 720);
+		ImageIcon imagem =new ImageIcon (Principal.class.getResource("/Imagens/back.jpg"));
+		Image mapa= imagem.getImage().getScaledInstance(lblMapa.getWidth(),lblMapa.getHeight() , Image.SCALE_SMOOTH);
+		lblMapa.setIcon(new ImageIcon(mapa));
+		contentPane.add(lblMapa);
+
+	}
+
+	protected static void DISPOSE_ON_CLOSE() {
+		// TODO Auto-generated method stub
+		
+	}
+}

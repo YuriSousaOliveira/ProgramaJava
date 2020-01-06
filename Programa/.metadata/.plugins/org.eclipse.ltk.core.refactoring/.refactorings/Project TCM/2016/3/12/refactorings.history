@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 7 elements from project &apos;Project TCM&apos;&#x0D;&#x0A;- Original project: &apos;Project TCM&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     InstrucoesDeUso.png&#x0D;&#x0A;     NumeroDeTelas.png&#x0D;&#x0A;     TelasOffline.png&#x0D;&#x0A;     TelasOffline2Dias.png&#x0D;&#x0A;     TelasOfflineHoje.png&#x0D;&#x0A;     TelasOfflineOntem.png&#x0D;&#x0A;     TelasProblemas.png" description="Delete elements" element1="src/Imagens/TelasProblemas.png" element2="src/Imagens/NumeroDeTelas.png" element3="src/Imagens/TelasOffline2Dias.png" element4="src/Imagens/TelasOffline.png" element5="src/Imagens/TelasOfflineHoje.png" element6="src/Imagens/TelasOfflineOntem.png" element7="src/Imagens/InstrucoesDeUso.png" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="7" stamp="1458264626816" subPackages="false" version="1.0"/>
+</session>

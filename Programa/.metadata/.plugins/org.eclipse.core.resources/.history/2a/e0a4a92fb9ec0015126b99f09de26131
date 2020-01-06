@@ -1,0 +1,170 @@
+import java.applet.Applet;
+import javax.swing.*;
+import javax.swing.border.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import java.net.URL;
+
+public class Principal extends JFrame {
+	
+	private JPanel contentPane;
+	public static void main(String[] args) {
+		Principal frame = new Principal();
+		frame.setBounds(100, 100, 1280, 720);
+		
+		frame.setVisible(true);
+	}
+	public Principal() {
+		setTitle("B2M\u00EDdia - Principal");
+		
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Principal.class.getResource("/Imagens/icon.png")));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1280, 720);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnproblemas = new JButton("");
+		btnproblemas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Problemas pag2 = new Problemas();  
+	             pag2.setVisible(true);
+	             pag2.setBounds(100, 100, 1280, 720);;
+	             dispose();
+			}
+		});
+		btnproblemas.setBounds(522, 138, 300, 50);
+		ImageIcon imagens1 =new ImageIcon (Principal.class.getResource("/Imagens/TelasProblemas2.png"));
+		Image botao= imagens1.getImage().getScaledInstance(btnproblemas.getWidth(),btnproblemas.getHeight() , Image.SCALE_SMOOTH);
+		btnproblemas.setIcon(new ImageIcon(botao));
+		contentPane.add(btnproblemas);
+		
+		JButton btnnumerodetelas = new JButton("");
+		btnnumerodetelas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				 NumeroDeTelas pag2 = new NumeroDeTelas();  
+	             pag2.setVisible(true);
+	             pag2.setExtendedState(JFrame.MAXIMIZED_BOTH);
+	             dispose();
+			}
+	             
+		});
+		btnnumerodetelas.setBounds(522, 199, 300, 50);
+		ImageIcon imagens2 =new ImageIcon (Principal.class.getResource("/Imagens/NumeroDeTelas2.png"));
+		Image botao2= imagens2.getImage().getScaledInstance(btnnumerodetelas.getWidth(),btnnumerodetelas.getHeight() , Image.SCALE_SMOOTH);
+		btnnumerodetelas.setIcon(new ImageIcon(botao2));
+		contentPane.add(btnnumerodetelas);
+		
+		JButton btntelasoffline = new JButton("");
+		btntelasoffline.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelasOffline pag3 = new TelasOffline();
+				pag3.setVisible(true);
+				pag3.setExtendedState(JFrame.MAXIMIZED_BOTH);
+	            dispose(); 
+			}
+		});
+		btntelasoffline.setBounds(522, 260, 300, 50);
+		ImageIcon imagens3 =new ImageIcon (Principal.class.getResource("/Imagens/TelasOffline2.png"));
+		Image botao3= imagens3.getImage().getScaledInstance(btntelasoffline.getWidth(),btntelasoffline.getHeight() , Image.SCALE_SMOOTH);
+		btntelasoffline.setIcon(new ImageIcon(botao3));
+		contentPane.add(btntelasoffline);
+		
+		JButton btntelasofflinehoje = new JButton("");
+		btntelasofflinehoje.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelasOfflineHoje pag5 = new TelasOfflineHoje();
+				pag5.setVisible(true);
+				pag5.setExtendedState(JFrame.MAXIMIZED_BOTH);
+	            dispose(); 
+			}
+		});
+		btntelasofflinehoje.setBounds(522, 321, 300, 50);
+		ImageIcon imagens5 =new ImageIcon (Principal.class.getResource("/Imagens/TelasOfflineHoje2.png"));
+		Image botao5= imagens5.getImage().getScaledInstance(btntelasofflinehoje.getWidth(),btntelasofflinehoje.getHeight() , Image.SCALE_SMOOTH);
+		btntelasofflinehoje.setIcon(new ImageIcon(botao5));
+		contentPane.add(btntelasofflinehoje);
+		
+		JButton btntelasofflineontem = new JButton("");
+		btntelasofflineontem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelasOfflineOntem pag6 = new TelasOfflineOntem();
+				pag6.setVisible(true);
+				pag6.setExtendedState(JFrame.MAXIMIZED_BOTH);
+	            dispose(); 
+			}
+		});
+		btntelasofflineontem.setBounds(522, 382, 300, 50);
+		ImageIcon imagens6 =new ImageIcon (Principal.class.getResource("/Imagens/TelasOfflineOntem2.png"));
+		Image botao6= imagens6.getImage().getScaledInstance(btntelasofflineontem.getWidth(),btntelasofflineontem.getHeight() , Image.SCALE_SMOOTH);
+		btntelasofflineontem.setIcon(new ImageIcon(botao6));
+		contentPane.add(btntelasofflineontem);
+		
+		JButton btntelasoffline2dias= new JButton("");
+		btntelasoffline2dias.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelasOffline2Dias pag7 = new TelasOffline2Dias();
+				pag7.setVisible(true);
+				pag7.setExtendedState(JFrame.MAXIMIZED_BOTH);
+	            dispose(); 
+			}
+		});
+		btntelasoffline2dias.setBounds(522, 443, 300, 50);
+		ImageIcon imagens7 =new ImageIcon (Principal.class.getResource("/Imagens/TelasOffline2Dias2.png"));
+		Image botao7= imagens7.getImage().getScaledInstance(btntelasoffline2dias.getWidth(),btntelasoffline2dias.getHeight() , Image.SCALE_SMOOTH);
+		btntelasoffline2dias.setIcon(new ImageIcon(botao7));
+		contentPane.add(btntelasoffline2dias);
+		
+		JButton btninstrucoesdeuso= new JButton("");
+		btninstrucoesdeuso.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				InstrucoesDeUso pag8 = new InstrucoesDeUso();
+				pag8.setVisible(true);
+				pag8.setExtendedState(JFrame.MAXIMIZED_BOTH);
+	            dispose(); 
+			}
+		});
+		btninstrucoesdeuso.setBounds(522, 504, 300, 50);
+		ImageIcon imagens8 =new ImageIcon (Principal.class.getResource("/Imagens/InstrucoesDeUso2.png"));
+		Image botao8= imagens8.getImage().getScaledInstance(btninstrucoesdeuso.getWidth(),btninstrucoesdeuso.getHeight() , Image.SCALE_SMOOTH);
+		btninstrucoesdeuso.setIcon(new ImageIcon(botao8));
+		contentPane.add(btninstrucoesdeuso);
+		
+		JButton btnsair = new JButton("");
+		btnsair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				dispose();
+			}
+		});
+		btnsair.setBounds(1206, 623, 48, 48);
+		ImageIcon imagens4 =new ImageIcon (Principal.class.getResource("/Imagens/exit.png"));
+		Image botao4= imagens4.getImage().getScaledInstance(btnsair .getWidth(),btnsair .getHeight() , Image.SCALE_SMOOTH);
+		btnsair .setIcon(new ImageIcon(botao4));
+		contentPane.add(btnsair);
+		
+		JLabel Logo = new JLabel("");
+		Logo.setBounds(522, 0, 300, 150);
+		ImageIcon image =new ImageIcon (Principal.class.getResource("/Imagens/Logo.png"));
+		Image Logo2= image.getImage().getScaledInstance(Logo.getWidth(),Logo.getHeight() , Image.SCALE_SMOOTH);
+		Logo.setIcon(new ImageIcon(Logo2));
+		contentPane.add(Logo);
+		
+		JLabel lblCriadoPor = new JLabel("Criado Por - Yuri Sousa Oliverra");
+		lblCriadoPor.setFont(new Font("Calibri", lblCriadoPor.getFont().getStyle() & ~Font.ITALIC | Font.BOLD, 25));
+		lblCriadoPor.setBounds(10, 640, 334, 31);
+		contentPane.add(lblCriadoPor);
+		
+		JLabel back = new JLabel("");
+		back.setBackground(getBackground());
+		//ImageIcon imagem =new ImageIcon (Principal.class.getResource("/Imagens/back.jpg"));
+		//Image back2= imagem.getImage().getScaledInstance(back.getWidth(),back.getHeight() , Image.SCALE_SMOOTH);
+		//back.setIcon(new ImageIcon(back2));
+		contentPane.add(back);
+
+	}
+	protected static void DISPOSE_ON_CLOSE() {
+		
+	}
+}
